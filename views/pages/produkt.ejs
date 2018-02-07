@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <% include ../partials/head %>
+</head>
+<body class="container">
+  <div class="wrapper">
+
+    <header>
+            <% include ../partials/header %>
+    </header>
+
+
+<!-- Logo -->
+ <div class="fixed-top container">
+   <div class="row">
+      <div class="col-sm-2 col-md-3">
+         <img src="./img/logo.jpg" alt="logo" style="width:280px;">
+      </div>
+    </div>
+</div>
+<!-- End Logo -->
+     
+     
+     
+     <div class="main container"><!--Main Container-->
+       <div class="container"><!-- PRODUCT container-->
+         <div class="row row-eq-height"><!-- PRODUCT Row -->
+     
+     
+     <div class="sidebar col-sm-3" style="padding:0px;">
+     
+      <div class="sidenav">
+         <h4><b>PRODUKTER</b></h4>
+         <ul>
+          <li><a href="#about">ALLE</a></li>
+          <li><a href="#services">SHOON</a></li>
+          <li><a href="#clients">KOREA SPECIAL</a></li>
+          <li><a href="#contact">US. IMPORTS</a></li>
+          <li><a href="#contact">SLEEK FABRICS UK</a></li>
+        </ul>
+    </div>
+
+    <% include ../partials/sideprodukt %>
+
+</div><!-- End of Row-->
+     
+
+        <% slips.forEach(element => { %>
+            <div class="side-pord-box col-sm-4">
+
+             <div class="side-pord-img">
+               <img class="img-responsive" src="img/<%= element.billede %>" alt="img">
+             </div>
+             
+             <div class="side-pord-info">
+               <p><b><%= element.navn %></b></p>
+               <p><%= element.type %></p>
+               <br>
+               <p><b>DKK <%= element.pris %>,-</b></p>
+               <button type="button" class="prod-btn btn">INFO</button>
+             </div>
+            
+            </div>
+            
+            
+            <% }) %>
+            
+       </div><!--End PRODUCT container-->
+     </div><!--End Main Container-->     
+
+    <footer class="footer">
+        <% include ../partials/footer %>
+    </footer>
+    
+
+  </div> <!--End wrapper--> 
+</body>
+</html>

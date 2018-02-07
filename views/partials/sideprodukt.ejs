@@ -1,0 +1,21 @@
+  <%  for (let index = 0; index < 3; index++) {%>
+    <div class="side-pord-box col-sm-4">
+
+     <div class="side-pord-img">
+       <img class="img-responsive" src="img/<%= slips[index].billede %>" alt="img">
+     </div>
+     
+     <div class="side-pord-info">
+       <p><b><%= slips[index].navn %></b></p>
+       <p><%= slips[index].type %></p>
+       <br>
+       <p><b>DKK <%= slips[index].pris %>,-</b></p>
+       <button type="button" class="prod-btn btn">INFO</button>
+     </div>
+    
+    </div>
+    
+    
+    <% } %>
+
+    

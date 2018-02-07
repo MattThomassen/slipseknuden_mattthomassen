@@ -1,0 +1,21 @@
+
+    <h4 class="venstre sidebar col-sm-4 col-sm-offset-1"><b>NYHEDER</b></h4>
+<% nyhed.forEach(element => { %>
+
+    <div class="sidebar col-sm-4 col-sm-offset-1">
+    
+            <div class="sidenav">
+                <div class="nyheder">
+                    <p>
+                        <span><%= element.dato %></span>
+                    </p>
+                    <p> <%= element.title %> <br>
+                        <%= element.text %>. <a href="#" style="color:black"><b>LÆS MERE...</b></a>
+                    </p> 
+                </div>
+            </div><!--End side-pord-box-->
+        
+        </div> <!--End sidebar col-sm-3-->
+    
+    <% }) %>
+    
